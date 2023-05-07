@@ -2,7 +2,10 @@ import pandas as pd
 import sqlite3
 import streamlit as st
 
+# The layout is changed to fill the whole webpage
 st.set_page_config(layout='wide')
+
+# Header image and title are loaded, the title has formated color (extra)
 st.image("header.PNG")
 st.markdown('<h1 style="color:#1c7edc;">Partner search app</h1>', unsafe_allow_html=True)
 
