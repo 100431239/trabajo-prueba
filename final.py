@@ -56,7 +56,7 @@ st.bar_chart(activity_type_grants_by_year)
 # Extra: Display a pie chart with distribution of activity types among partners in the selected country
 st.markdown('<h2 style="color:#1c7edc;">Distribution of activity types among partners</h2>', unsafe_allow_html=True)
 activity_type_counts = participants_df["activityType"].value_counts()
-st.pie_chart(activity_type_counts)
+st.area_chart(activity_type_counts)
 
 # Extra: Displaying list/stats of projects according to the project keywords
 keywords = st.multiselect("Select project keywords to filter:", options=['AI', 'IoT', 'Big Data', 'Cloud', 'Security'])
