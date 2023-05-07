@@ -1,24 +1,6 @@
 import pandas as pd
 import sqlite3
 import streamlit as st
-st.cache(allow_output_mutation=True)
-
-
-# Custom styles
-st.markdown("""
-<style>
-body {
-    color: #071eed;
-    background-color: #ffffff;
-}
-.stMarkdown h2 {
-    color: :#071eed;
-}
-.stMarkdown h3 {
-    color::#071eed;
-}
-</style>
-    """, unsafe_allow_html=True)
 
 st.image("header.PNG")
 st.title("Partner search app")
@@ -43,7 +25,8 @@ participants_df = pd.read_sql_query(
     f"organizationURL, year",  conn)
 
 # FR2.9: Display the generated dataset, in descending order by received grants
-st.subheader(f"Participants in {country_name}")
+st.markdown('<h2 style="color:#000080;">Participants in {}</h2>'.format(country_name), unsafe_allow_html=True)
+
 st.write(participants_df.sort_values("Total_Grants_Received", ascending=False))
 
 # FR2.10: Generate a new project dataframe with the project coordinators from the selected country
