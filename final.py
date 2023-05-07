@@ -25,7 +25,7 @@ participants_df = pd.read_sql_query(
     f"organizationURL, year",  conn)
 
 # FR2.9: Display the generated dataset, in descending order by received grants
-st.markdown('<h2 style="color:#000080;">Participants in {}</h2>'.format(country_name), unsafe_allow_html=True)
+st.markdown('<h2 style="color:#071eed;">Participants in {}</h2>'.format(country_name), unsafe_allow_html=True)
 
 st.write(participants_df.sort_values("Total_Grants_Received", ascending=False))
 
