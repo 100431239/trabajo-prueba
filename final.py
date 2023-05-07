@@ -54,9 +54,9 @@ st.download_button("Download Participants CSV", data=participants_csv, file_name
 st.download_button("Download Project Coordinators CSV", data=project_coordinators_csv, file_name='project_coordinators.csv', mime='text/csv')
 
 # Extra: Display a bar chart with evolution of received grants of the partners in a country according to their activityType
-st.subheader("Evolution of received grants according to activityType")
-activity_type_grants = participants_df.groupby("activityType")["Total_Grants_Received"].sum()
-st.bar_chart(activity_type_grants)
+st.subheader("Evolution of received grants according to activityType and year")
+activity_type_grants_by_year = participants_df.groupby(["year", "activityType"])["Total_Grants_Received"].sum().unstack().fillna(0)
+st.bar_chart(activity_type_grants_by_year)
 
 # Extra: Displaying list/stats of projects according to the project keywords
 keywords = st.multiselect("Select project keywords to filter:", options=['AI', 'IoT', 'Big Data', 'Cloud', 'Security'])
