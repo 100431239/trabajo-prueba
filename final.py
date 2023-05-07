@@ -3,7 +3,7 @@ import sqlite3
 import streamlit as st
 
 st.image("header.PNG")
-st.title("Partner search app")
+st.markdown('<h1 style="color:#071eed;">Partner search app</h1>', unsafe_allow_html=True)
 
 # FR2.5: Connect to the ecsel_database.db and extract the list of countries in a dataframe
 conn = sqlite3.connect('ecsel_database.db')
