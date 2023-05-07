@@ -1,6 +1,7 @@
 import pandas as pd
 import sqlite3
 import streamlit as st
+st.cache(allow_output_mutation=True)
 
 
 # Custom styles
