@@ -2,6 +2,7 @@ import pandas as pd
 import sqlite3
 import streamlit as st
 
+st.set_page_config(layout='wide')
 st.image("header.PNG")
 st.markdown('<h1 style="color:#1c7edc;">Partner search app</h1>', unsafe_allow_html=True)
 
