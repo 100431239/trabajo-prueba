@@ -11,10 +11,10 @@ body {
     background-color: #ffffff;
 }
 .stMarkdown h2 {
-    color: :#000080;
+    color: :#071eed;
 }
 .stMarkdown h3 {
-    color::#000080;
+    color::#071eed;
 }
 </style>
     """, unsafe_allow_html=True)
