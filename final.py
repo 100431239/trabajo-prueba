@@ -11,14 +11,13 @@ body {
     background-color: #ffffff;
 }
 .stMarkdown h2 {
-    color: #fada5e;
+    color: :#000080;
 }
 .stMarkdown h3 {
-    color: #fada5e;
+    color::#000080;
 }
 </style>
     """, unsafe_allow_html=True)
-st.markdown('<h1 style="color:#000080;">Partner search app</h1>', unsafe_allow_html=True)
 
 st.image("header.PNG")
 st.title("Partner search app")
