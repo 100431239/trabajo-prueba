@@ -2,6 +2,14 @@ import pandas as pd
 import sqlite3
 import streamlit as st
 
+left_column, right_column = st.columns(2)
+
+# Use the left column for some content
+left_column.subheader("Left column content")
+
+# Use the right column for other content
+right_column.subheader("Right column content")
+
 st.set_page_config(layout='wide')
 st.image("header.PNG")
 st.markdown('<h1 style="color:#1c7edc;">Partner search app</h1>', unsafe_allow_html=True)
