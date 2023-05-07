@@ -62,7 +62,7 @@ keywords = st.multiselect("Select project keywords to filter:", options=['AI', '
 filtered_projects_df = pd.read_sql_query("SELECT * FROM Projects", conn)
 
 if keywords:
-    filtered_projects_df = filtered_projects_df[filtered_projects_df["keywords"].apply(lambda x: any(kw in x for kw in keywords))]
+    filtered_projects_df = filtered_projects_df[filtered_projects_df["objetive"].apply(lambda x: any(kw in x for kw in keywords))]
 
 st.subheader("Filtered Projects List")
 st.write(filtered_projects_df)
