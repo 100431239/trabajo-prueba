@@ -9,15 +9,11 @@ body {
     color: #4f8a8b;
     background-color: #e0ece4;
 }
-.stButton>button {
+.st-37de5e {
     background-color: #4f8a8b;
     color: white;
 }
-.stSelectBox>div>div>select {
-    background-color: #e0ece4;
-    color: #4f8a8b;
-}
-.stMultiSelect>div>div>select {
+.st-053ef4 {
     background-color: #e0ece4;
     color: #4f8a8b;
 }
