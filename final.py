@@ -1,6 +1,8 @@
 import pandas as pd
 import sqlite3
 import streamlit as st
+st.cache(allow_output_mutation=True)
+
 
 # Custom styles
 st.set_page_config(layout='wide', initial_sidebar_state='expanded', page_title='Partner search app', page_icon=None)
