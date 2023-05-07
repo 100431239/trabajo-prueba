@@ -18,6 +18,8 @@ body {
 }
 </style>
     """, unsafe_allow_html=True)
+st.markdown('<h1 style="color:#000080;">Partner search app</h1>', unsafe_allow_html=True)
+
 st.image("header.PNG")
 st.title("Partner search app")
 
