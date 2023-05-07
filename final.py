@@ -5,8 +5,20 @@ st.cache(allow_output_mutation=True)
 
 
 # Custom styles
-st.set_page_config(layout='wide', initial_sidebar_state='expanded', page_title='Partner search app', page_icon=None)
-
+st.markdown("""
+<style>
+body {
+    color: #003399;
+    background-color: #ffffff;
+}
+.stMarkdown h2 {
+    color: #fada5e;
+}
+.stMarkdown h3 {
+    color: #fada5e;
+}
+</style>
+    """, unsafe_allow_html=True)
 st.image("header.PNG")
 st.title("Partner search app")
 
