@@ -9,6 +9,18 @@ body {
     color: #4f8a8b;
     background-color: #e0ece4;
 }
+.stButton>button {
+    background-color: #4f8a8b;
+    color: white;
+}
+.stSelectBox>div>div>select {
+    background-color: #e0ece4;
+    color: #4f8a8b;
+}
+.stMultiSelect>div>div>select {
+    background-color: #e0ece4;
+    color: #4f8a8b;
+}
 </style>
     """, unsafe_allow_html=True)
 st.image("header.PNG")
@@ -23,6 +35,8 @@ acros = list(countries_df["Acronym"])
 # FR2.6: Ask the user to input a country acronym
 selected_country_acronym = st.selectbox("Please select a country acronym from the dropdown menu:", acros)
 country_name = countries_df.loc[countries_df["Acronym"] == selected_country_acronym, "Country"].values[0]
+
+
 
 # FR2.8: Generate a new dataframe of participants with the total amount of received grants per partner in the
 # selected country and include the year information
