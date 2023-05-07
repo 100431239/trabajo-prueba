@@ -25,11 +25,11 @@ selected_country_acronym = st.selectbox("Please select a country acronym from th
 country_name = countries_df.loc[countries_df["Acronym"] == selected_country_acronym, "Country"].values[0]
 
 # FR2.8: Generate a new dataframe of participants with the total amount of received grants per partner in the
-# selected country
+# selected country and include the year information
 participants_df = pd.read_sql_query(
-    f"SELECT shortName, name, activityType, organizationURL, SUM(ecContribution) AS Total_Grants_Received "
-    f"FROM Participants WHERE Country = '{selected_country_acronym}' GROUP BY shortName, name, activityType, "
-    f"organizationURL",  conn)
+    f"SELECT shortName, name, activityType, organizationURL, strftime('%Y', startDate) as year, SUM(ecContribution) AS Total_Grants_Received "
+    f"FROM Participants p JOIN Projects pr ON p.projectID = pr.projectID WHERE Country = '{selected_country_acronym}' GROUP BY shortName, name, activityType, "
+    f"organizationURL, year",  conn)
 
 # FR2.9: Display the generated dataset, in descending order by received grants
 st.subheader(f"Participants in {country_name}")
