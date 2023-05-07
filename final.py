@@ -58,7 +58,7 @@ filtered_projects_df = pd.read_sql_query("SELECT * FROM Projects", conn)
 if keywords:
     filtered_projects_df = filtered_projects_df[filtered_projects_df["objective"].apply(lambda x: any(kw in x for kw in keywords))]
 
-st.subheader("Filtered Projects List")
+st.markdown('<h2 style="color:#071eed;">Filtered Projects List</h2>', unsafe_allow_html=True)
 st.write(filtered_projects_df)
 
 # Closing the connection
