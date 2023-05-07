@@ -7,7 +7,7 @@ import streamlit as st
 st.markdown("""
 <style>
 body {
-    color: #003399;
+    color: #071eed;
     background-color: #ffffff;
 }
 .stMarkdown h2 {
