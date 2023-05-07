@@ -3,22 +3,13 @@ import sqlite3
 import streamlit as st
 
 # Custom styles
-st.markdown("""
-<style>
-body {
-    color: #4f8a8b;
-    background-color: #e0ece4;
-}
-.st-37de5e {
-    background-color: #4f8a8b;
-    color: white;
-}
-.st-053ef4 {
-    background-color: #e0ece4;
-    color: #4f8a8b;
-}
-</style>
-    """, unsafe_allow_html=True)
+st.set_page_config(layout='wide', initial_sidebar_state='expanded', page_title='Partner search app', page_icon=None, theme={
+    'primaryColor': '#4f8a8b',
+    'backgroundColor': '#e0ece4',
+    'secondaryBackgroundColor': '#FFFFFF',
+    'textColor': '#4f8a8b',
+    'font': 'sans-serif'
+})
 st.image("header.PNG")
 st.title("Partner search app")
 
