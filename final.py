@@ -43,8 +43,40 @@ participants_csv = participants_df.to_csv(index=False)
 project_coordinators_csv = project_coordinators_df.to_csv(index=False)
 
 # FR2.12: Display two download buttons to download the CSV files
-st.download_button("Download Participants CSV", data=participants_csv, file_name='participants_country.csv', mime='text/csv')
-st.download_button("Download Project Coordinators CSV", data=project_coordinators_csv, file_name='project_coordinators.csv', mime='text/csv')
+participants_button_style = """
+    background-color: #1c7edc;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+"""
+
+project_coordinators_button_style = """
+    background-color: #1c7edc;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+"""
+
+st.download_button(
+    "Download Participants CSV",
+    data=participants_csv,
+    file_name='participants_country.csv',
+    mime='text/csv',
+    style=participants_button_style,
+)
+
+st.download_button(
+    "Download Project Coordinators CSV",
+    data=project_coordinators_csv,
+    file_name='project_coordinators.csv',
+    mime='text/csv',
+    style=project_coordinators_button_style,
+)
+
 
 # Extra: Display a bar chart with evolution of received grants of the partners in a country according to their activityType
 st.markdown('<h2 style="color:#1c7edc;">Evolution of received grants according to activityType and year</h2>', unsafe_allow_html=True)
