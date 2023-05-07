@@ -3,13 +3,8 @@ import sqlite3
 import streamlit as st
 
 # Custom styles
-st.set_page_config(layout='wide', initial_sidebar_state='expanded', page_title='Partner search app', page_icon=None, theme={
-    'primaryColor': '#4f8a8b',
-    'backgroundColor': '#e0ece4',
-    'secondaryBackgroundColor': '#FFFFFF',
-    'textColor': '#4f8a8b',
-    'font': 'sans-serif'
-})
+st.set_page_config(layout='wide', initial_sidebar_state='expanded', page_title='Partner search app', page_icon=None)
+
 st.image("header.PNG")
 st.title("Partner search app")
 
