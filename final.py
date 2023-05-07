@@ -26,7 +26,6 @@ participants_df = pd.read_sql_query(
 
 # FR2.9: Display the generated dataset, in descending order by received grants
 st.markdown('<h2 style="color:#071eed;">Participants in {}</h2>'.format(country_name), unsafe_allow_html=True)
-
 st.write(participants_df.sort_values("Total_Grants_Received", ascending=False))
 
 # FR2.10: Generate a new project dataframe with the project coordinators from the selected country
@@ -36,7 +35,7 @@ project_coordinators_df = pd.read_sql_query(
     f"GROUP BY shortName, name, activityType, projectAcronym", conn)
 
 # FR2.11: Display the generated coordinator dataset, in ascending order by shortName
-st.subheader(f"Project coordinators in {country_name}")
+st.markdown('<h2 style="color:#071eed;">Project coordinators in {}</h2>'.format(country_name), unsafe_allow_html=True)
 st.write(project_coordinators_df.sort_values("shortName", ascending=True))
 
 # FR2.12: Save the generated datasets (participants, and project coordinators) in a CSV file
@@ -48,7 +47,7 @@ st.download_button("Download Participants CSV", data=participants_csv, file_name
 st.download_button("Download Project Coordinators CSV", data=project_coordinators_csv, file_name='project_coordinators.csv', mime='text/csv')
 
 # Extra: Display a bar chart with evolution of received grants of the partners in a country according to their activityType
-st.subheader("Evolution of received grants according to activityType and year")
+st.markdown('<h2 style="color:#071eed;">Evolution of received grants according to activityType and year</h2>', unsafe_allow_html=True)
 activity_type_grants_by_year = participants_df.groupby(["year", "activityType"])["Total_Grants_Received"].sum().unstack().fillna(0)
 st.bar_chart(activity_type_grants_by_year)
 
